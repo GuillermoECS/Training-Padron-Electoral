@@ -72,4 +72,10 @@ fabric.properties
 !.vscode/launch.json
 !.vscode/extensions.json
 
-idea/
+
+# Ignore files
+.idea/*
+padron/padron/__pycache__/*
+padron/padron/__pycache__/__init__.cpython-35.pyc
+padron/padron/__pycache__/settings.cpython-35.pyc
+padron/padron/__pycache__/urls.cpython-35.pyc
