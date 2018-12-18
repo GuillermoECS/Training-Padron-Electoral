@@ -55,3 +55,7 @@ class Codigo_electoral(models.Model):
         Distrito,
         on_delete=models.CASCADE,
     )
+
+
+
+
