@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'padron.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DBNAME', 'padron'),
+        'USER': os.getenv('DBUSER', 'padron_user'),
+        'PASSWORD': os.getenv('DBPASSWORD', 'padron_user'),
+        'HOST': os.getenv('DBHOST', '127.0.0.1'),
+        'PORT': os.getenv('DBPORT', '5432'),
     }
 }
 
