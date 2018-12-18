@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'registro',
 ]
 
 MIDDLEWARE = [
@@ -77,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('DBNAME', 'padron'),
-        'USER': os.getenv('DBUSER', 'admin'),
-        'PASSWORD': os.getenv('DBPASSWORD', 'admin'),
+        'USER': os.getenv('DBUSER', 'padron_user'),
+        'PASSWORD': os.getenv('DBPASSWORD', 'padron_user'),
         'HOST': os.getenv('DBHOST', '127.0.0.1'),
         'PORT': os.getenv('DBPORT', '5432'),
     }
