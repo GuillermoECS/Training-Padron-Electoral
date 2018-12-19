@@ -1,12 +1,13 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from .models import Persona
+from django.core import serializers
 
 # Create your views here.
 
-def myjsonview(request ):
-    contexto = {
-        'a': 1,
-        'b': 2,
-        'c': 3
-    }
-    response = HttpResponse(json.dumps(contexto), content_type='application/json')
-return response
+def personaJson(request):
+    personas = serializers.serialize('json', Persona.objects.all())
+    response = HttpResponse(personas, content_type='application/json')
+    return response
+
+
